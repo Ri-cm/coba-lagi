@@ -1,5 +1,6 @@
 body {
     display: flex;
+    flex-direction: column; /* pastikan konten bertumpuk ke bawah di mobile */
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -10,6 +11,7 @@ body {
 
 .container {
     text-align: center;
+    padding: 20px;
 }
 
 .header_text {
@@ -18,15 +20,15 @@ body {
 }
 
 .gif_container img {
-    width: 100%; 
-    max-width: 500px; 
-    height: auto; 
+    width: 100%;
+    max-width: 500px;
+    height: auto;
 }
 
 .button {
-    margin-top: auto; 
+    margin-top: auto;
     margin-bottom: 30px;
-    align-items: center;
+    display: flex;
     justify-content: center;
 }
 
@@ -38,7 +40,6 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(255, 75, 92, 0.4);
-    
 }
 
 .button button:hover {
@@ -53,5 +54,26 @@ body {
     font-size: 1.1em;
     font-weight: bold;
     letter-spacing: 1px;
-    justify-content: end;
+}
+
+/* 🔹 Responsif untuk tampilan mobile */
+@media (max-width: 600px) {
+    .header_text {
+        font-size: 2em;
+    }
+
+    .button button {
+        width: 80%; /* tombol menyesuaikan lebar layar */
+        padding: 12px 0; /* tinggi tombol proporsional */
+        font-size: 1em;
+    }
+
+    .button a {
+        font-size: 1em;
+        letter-spacing: 0.5px;
+    }
+
+    .gif_container img {
+        max-width: 300px;
+    }
 }
