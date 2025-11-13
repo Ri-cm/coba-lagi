@@ -20,6 +20,22 @@
 <a href="https://wa.me/6281236144425?text=iya+aku+mau" target="_blank">Chat aku kalo mau</a>
         </button>
     </div>
+     <audio id="loveSong" autoplay loop>
+  <source src="hivi-satu-satunya-official-music-video_ipeEVawG.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const audio = document.getElementById("loveSong");
+  const savedTime = localStorage.getItem("currentTime");
+  const wasPlaying = localStorage.getItem("isPlaying") === "true";
+
+  if (savedTime) {
+    audio.currentTime = parseFloat(savedTime);
+  }
+  if (wasPlaying) {
+    audio.play();
+  }
+</script>
     <script src="yes-page.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calling You</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="index.html">
+
 </head>
 <body>
       <div class="container">
@@ -18,8 +18,27 @@
       <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW5lenZyZHI5OXM2eW95b3pmMG40cWVrMDhtNjVuM3A4dGNxa2g2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/VM1fcpu2bKs1e2Kdbj/giphy.gif" alt="Cute GIF">
     </div>
   </div>
+  
+  <audio id="loveSong" autoplay loop>
+  <source src="hivi-satu-satunya-official-music-video_ipeEVawG.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const audio = document.getElementById("loveSong");
+  const savedTime = localStorage.getItem("currentTime");
+  const wasPlaying = localStorage.getItem("isPlaying") === "true";
+
+  if (savedTime) {
+    audio.currentTime = parseFloat(savedTime);
+  }
+  if (wasPlaying) {
+    audio.play();
+  }
+</script>
 
 
-    <script src="script.js"></script>
+     <script src="ajak-script.js"></script>
+
+    </script>
 </body>
 </html>
