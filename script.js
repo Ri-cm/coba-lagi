@@ -97,3 +97,12 @@ function createHeart() {
 
 // buat hati setiap 300ms
 setInterval(createHeart, 300);
+
+// Efek klik amplop menampilkan surat
+const envelope = document.getElementById('envelope');
+const letter = document.getElementById('letter');
+
+envelope.addEventListener('click', () => {
+  envelope.style.display = 'none'; // sembunyikan amplop
+  letter.style.display = 'block'; // tampilkan surat
+});

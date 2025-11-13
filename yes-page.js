@@ -15,3 +15,4 @@ function createHeart() {
 
 // buat hati setiap 300ms
 setInterval(createHeart, 300);
+
